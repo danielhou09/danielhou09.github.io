@@ -1,1495 +1,208 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+
 <head>
-  <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
-<meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 5.2.0">
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
-  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-<link rel="stylesheet" href="/css/main.css">
-
-
-<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
-
-<script id="hexo-configurations">
-    var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"dadongx.cn","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
-  </script>
-
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9133307610871547"
-     crossorigin="anonymous"></script>
-  <meta name="description" content="This is a amazing page !">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Daniel Hou">
-<meta property="og:url" content="http://dadongx.cn/index.html">
-<meta property="og:site_name" content="Daniel Hou">
-<meta property="og:description" content="This is a amazing page !">
-<meta property="og:locale" content="zh_CN">
-<meta property="article:author" content="Daniel">
-<meta property="article:tag" content="dadong daniel  java Web">
-<meta name="twitter:card" content="summary">
-
-<link rel="canonical" href="http://dadongx.cn/">
-
-
-<script id="page-configurations">
-  // https://hexo.io/docs/variables.html
-  CONFIG.page = {
-    sidebar: "",
-    isHome : true,
-    isPost : false,
-    lang   : 'zh-CN'
-  };
-</script>
-
-  <title>Daniel Hou</title>
-  
-
-
-
-
-
-
-  <noscript>
-  <style>
-  .use-motion .brand,
-  .use-motion .menu-item,
-  .sidebar-inner,
-  .use-motion .post-block,
-  .use-motion .pagination,
-  .use-motion .comments,
-  .use-motion .post-header,
-  .use-motion .post-body,
-  .use-motion .collection-header { opacity: initial; }
-
-  .use-motion .site-title,
-  .use-motion .site-subtitle {
-    opacity: initial;
-    top: initial;
-  }
-
-  .use-motion .logo-line-before i { left: initial; }
-  .use-motion .logo-line-after i { right: initial; }
-  </style>
-</noscript>
-
-</head>
-
-<body itemscope itemtype="http://schema.org/WebPage">
-  <div class="container use-motion">
-    <div class="headband"></div>
-
-    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-container">
-  <div class="site-nav-toggle">
-    <div class="toggle" aria-label="切换导航栏">
-      <span class="toggle-line toggle-line-first"></span>
-      <span class="toggle-line toggle-line-middle"></span>
-      <span class="toggle-line toggle-line-last"></span>
-    </div>
-  </div>
-
-  <div class="site-meta">
-
-    <a href="/" class="brand" rel="start">
-      <span class="logo-line-before"><i></i></span>
-      <h1 class="site-title">Daniel Hou</h1>
-      <span class="logo-line-after"><i></i></span>
-    </a>
-      <p class="site-subtitle" itemprop="description">Less is more !</p>
-  </div>
-
-  <div class="site-nav-right">
-    <div class="toggle popup-trigger">
-    </div>
-  </div>
-</div>
-
-
-
-
-<nav class="site-nav">
-  <ul id="menu" class="main-menu menu">
-        <li class="menu-item menu-item-home">
-
-    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
-
-  </li>
-        <li class="menu-item menu-item-about">
-
-    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
-
-  </li>
-        <li class="menu-item menu-item-archives">
-
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
-
-  </li>
-  </ul>
-</nav>
-
-
-
-
-</div>
-    </header>
-
+    <meta name="author" content="Daniel">
     
-  <div class="back-to-top">
-    <i class="fa fa-arrow-up"></i>
-    <span>0%</span>
-  </div>
-
-
-    <main class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          
-
-          <div class="content index posts-expand">
+        
+            <meta name="subtitle" content="Less is more !">
             
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://dadongx.cn/2023/02/17/restart/">
+                
+                    <meta name="description" content="This is a amazing page !">
+                    
+                        
+                            <meta name="keywords" content="dadong daniel  java Web">
+                            
+                                
+                                    <title>
+                                        
+                                                    Daniel Hou
+                                    </title>
 
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Daniel">
-      <meta itemprop="description" content="This is a amazing page !">
-    </span>
+                                    
+                                        
+                                            <link rel="icon" href="/favicon.ico">
+                                            
 
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Daniel Hou">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2023/02/17/restart/" class="post-title-link" itemprop="url">重启</a>
-        </h2>
+                                                
+                                                    
+                                                        <!-- stylesheets list from _config.yml -->
+                                                        
+                                                            <link rel="stylesheet" href="/css/style.css">
+                                                            
+                                                                
+                                                                    
+                                                                        
+                                                                            <!-- scripts list from _config.yml -->
+                                                                            
+                                                                                <script src="/js/script.js"></script>
+                                                                                
+                                                                                <script src="/js/tocbot.min.js"></script>
+                                                                                
+                                                                                    
+                                                                                        
+                                                                                            
+                                                                                                
+                                                                                                    
+                                                                                                                
+                                                                                                                            
+                                                                                                                                
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9133307610871547" crossorigin="anonymous"></script>
+<meta name="generator" content="Hexo 5.2.0"></head>
 
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
+<body>
+    <script>
+        // this function is used to check current theme before page loaded.
+        (() => {
+            const currentTheme = window.localStorage && window.localStorage.getItem('theme') || '';
+            const isDark = currentTheme === 'dark';
+            const pagebody = document.getElementsByTagName('body')[0]
+            if (isDark) {
+                pagebody.classList.add('dark-theme');
+                // mobile
+                document.getElementById("mobile-toggle-theme").innerText = "· Dark"
+            } else {
+                pagebody.classList.remove('dark-theme');
+                // mobile
+                document.getElementById("mobile-toggle-theme").innerText = "· Light"
+            }
+        })();
+    </script>
 
-              <time title="创建时间：2023-02-17 08:55:00 / 修改时间：11:30:59" itemprop="dateCreated datePublished" datetime="2023-02-17T08:55:00+08:00">2023-02-17</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/study/" itemprop="url" rel="index"><span itemprop="name">study</span></a>
-                </span>
-            </span>
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Changyan：</span>
-    
-    
-      <a title="changyan" href="/2023/02/17/restart/#SOHUCS" itemprop="discussionUrl">
-        <span id="url::http://dadongx.cn/2023/02/17/restart/" class="cy_cmt_count" data-xid="2023/02/17/restart/" itemprop="commentCount"></span>
-      </a>
-    
-  </span>
-  
-  <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>639</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
-            </span>
-
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo"><a href="/">Daniel Hou</a></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/categories/study">学习</a>
+                
+                    <a class="menu-item" href="/categories/%E6%8A%80%E6%9C%AF">技术</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+                <input id="switch_default" type="checkbox" class="switch_default">
+                <label for="switch_default" class="toggleBtn"></label>
+            </div>
         </div>
-      </header>
+    </nav>
 
     
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>人生是一场漫长的旅程，每个人都会面临起伏不定的挑战和机会。有时候我们会因为失败而感到沮丧和失落，但是重启人生的机会总是存在的。重新奋斗的人生，就是向前迈出的第一步。</p>
-<p>首先，要重启人生，我们需要改变自己的心态。我们需要意识到，过去的失败并不代表未来的失败，反而是一次宝贵的经验。我们需要从失败中吸取教训，了解我们可以做得更好的地方，并从中受益。我们需要坚信自己的能力和价值，并且不要害怕尝试新的事物。</p>
-<p>其次，我们需要为自己设定目标，并采取积极的行动。我们需要制定清晰明确的计划，为自己设定短期和长期目标，并设定可以衡量自己进展的标准。我们需要认真思考自己的职业和生活目标，并为之努力奋斗。我们需要充满动力，不断向前迈进。</p>
-<p>第三，我们需要积极学习和成长。学习是一辈子的事情，我们需要持续不断地学习新的知识和技能，以适应变化的世界。我们需要主动探索新的领域，并不断提高自己的技能水平。我们需要寻求并接受他人的帮助和建议，并为自己设定更高的目标，不断追求卓越。</p>
-<p>最后，我们需要保持积极的心态。我们需要坚持自己的信念和价值观，克服困难和挑战，保持自信和勇气。我们需要积极面对挑战和失败，并且从中汲取力量和智慧。我们需要保持乐观和自信，不断努力，追求自己的梦想和目标。</p>
-<p>总之，重新奋斗的人生充满了机遇和挑战。我们需要改变自己的心态，为自己设定目标，并积极行动。我们需要积极学习和成长，保持积极的心态，并坚信自己的能力和价值。最重要的是，我们需要始终保持决心和毅力，不断向前迈进，实现自己的梦想和目标。</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://dadongx.cn/2023/02/16/target/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Daniel">
-      <meta itemprop="description" content="This is a amazing page !">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Daniel Hou">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2023/02/16/target/" class="post-title-link" itemprop="url">我的规划</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2023-02-16 23:20:50" itemprop="dateCreated datePublished" datetime="2023-02-16T23:20:50+08:00">2023-02-16</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-02-17 11:19:40" itemprop="dateModified" datetime="2023-02-17T11:19:40+08:00">2023-02-17</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/work/" itemprop="url" rel="index"><span itemprop="name">工作</span></a>
-                </span>
-            </span>
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Changyan：</span>
-    
-    
-      <a title="changyan" href="/2023/02/16/target/#SOHUCS" itemprop="discussionUrl">
-        <span id="url::http://dadongx.cn/2023/02/16/target/" class="cy_cmt_count" data-xid="2023/02/16/target/" itemprop="commentCount"></span>
-      </a>
-    
-  </span>
-  
-  <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>67</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
-            </span>
-
+    <nav class="navbar-mobile" id="nav-mobile">
+        <div class="container">
+            <div class="navbar-header">
+                <div>
+                    <a href="/">Daniel Hou</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
+                </div>
+                <div class="menu-toggle" onclick="mobileBtn()">&#9776; Menu</div>
+            </div>
+            <div class="menu" id="mobile-menu">
+                
+                    <a class="menu-item" href="/categories/study">学习</a>
+                
+                    <a class="menu-item" href="/categories/%E6%8A%80%E6%9C%AF">技术</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+            </div>
         </div>
-      </header>
+    </nav>
 
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>我的规划</p>
-<hr>
-<p>认知升级：不断学习去升级认知，做更好的自己。<br>长期主义：做有长期收益的事情，比如写作与投资。<br>积极分享：分享个人经验积极影响他人。</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://dadongx.cn/2023/02/15/java-%E4%B8%AD%E7%9A%84%E9%94%81%E8%A7%A3%E5%86%B3%E4%BB%80%E4%B9%88%E9%97%AE%E9%A2%98/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Daniel">
-      <meta itemprop="description" content="This is a amazing page !">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Daniel Hou">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2023/02/15/java-%E4%B8%AD%E7%9A%84%E9%94%81%E8%A7%A3%E5%86%B3%E4%BB%80%E4%B9%88%E9%97%AE%E9%A2%98/" class="post-title-link" itemprop="url">java 中的锁解决什么问题?</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2023-02-15 16:31:47" itemprop="dateCreated datePublished" datetime="2023-02-15T16:31:47+08:00">2023-02-15</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-02-17 11:29:53" itemprop="dateModified" datetime="2023-02-17T11:29:53+08:00">2023-02-17</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index"><span itemprop="name">技术</span></a>
-                </span>
-            </span>
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Changyan：</span>
-    
-    
-      <a title="changyan" href="/2023/02/15/java-%E4%B8%AD%E7%9A%84%E9%94%81%E8%A7%A3%E5%86%B3%E4%BB%80%E4%B9%88%E9%97%AE%E9%A2%98/#SOHUCS" itemprop="discussionUrl">
-        <span id="url::http://dadongx.cn/2023/02/15/java-%E4%B8%AD%E7%9A%84%E9%94%81%E8%A7%A3%E5%86%B3%E4%BB%80%E4%B9%88%E9%97%AE%E9%A2%98/" class="cy_cmt_count" data-xid="2023/02/15/java-中的锁解决什么问题/" itemprop="commentCount"></span>
-      </a>
-    
-  </span>
-  
-  <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>387</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>Java中的锁是一种同步机制，可以确保多个线程之间共享资源的互斥访问，从而避免出现数据竞争和线程安全问题。使用锁的主要目的是保证代码的正确性和可靠性。</p>
-<p>Java中的锁能够解决以下实际问题：</p>
-<p>数据竞争：在多线程环境中，如果多个线程同时访问共享数据，就会产生数据竞争问题。使用锁可以确保同一时间只有一个线程可以访问共享资源，避免数据竞争和数据不一致的问题。<br>线程安全：Java中的锁可以确保线程安全，避免多个线程之间的干扰和竞争，从而保证代码的正确性和可靠性。<br>性能优化：Java中的锁可以用于优化程序的性能，比如使用读写锁来实现对数据的读写分离，从而提高程序的并发性能。<br>死锁问题：Java中的锁可以用于避免死锁问题，比如使用一致性的加锁顺序，避免出现循环依赖的情况。<br>总之，Java中的锁机制是保证多线程并发安全的重要手段，可以用于解决数据竞争、线程安全、性能优化和死锁问题等实际问题。</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://dadongx.cn/2023/02/15/java%E6%80%8E%E6%89%BE%E5%B7%A5%E4%BD%9C/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Daniel">
-      <meta itemprop="description" content="This is a amazing page !">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Daniel Hou">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2023/02/15/java%E6%80%8E%E6%89%BE%E5%B7%A5%E4%BD%9C/" class="post-title-link" itemprop="url">java怎找工作</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2023-02-15 16:24:29" itemprop="dateCreated datePublished" datetime="2023-02-15T16:24:29+08:00">2023-02-15</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-02-17 11:30:05" itemprop="dateModified" datetime="2023-02-17T11:30:05+08:00">2023-02-17</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/study/" itemprop="url" rel="index"><span itemprop="name">study</span></a>
-                </span>
-            </span>
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Changyan：</span>
-    
-    
-      <a title="changyan" href="/2023/02/15/java%E6%80%8E%E6%89%BE%E5%B7%A5%E4%BD%9C/#SOHUCS" itemprop="discussionUrl">
-        <span id="url::http://dadongx.cn/2023/02/15/java%E6%80%8E%E6%89%BE%E5%B7%A5%E4%BD%9C/" class="cy_cmt_count" data-xid="2023/02/15/java怎找工作/" itemprop="commentCount"></span>
-      </a>
-    
-  </span>
-  
-  <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>443</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>java 程序员怎么做找工作</p>
-<p>在网络招聘网站上搜索职位。在中国，像智联招聘、前程无忧、猎聘网等招聘网站上，有许多公司在招聘JAVA程序员。通过这些网站可以快速找到自己合适的工作。</p>
-<p>关注社交媒体和专业网站。<br>加入一些面向JAVA程序员的社交媒体和专业网站，如 CSDN、51CTO 等，并关注相关领域的微信公众号或QQ群。这些渠道可能会发布一些招聘信息，并且也能让您了解最新技术动态。</p>
-<p>参加招聘会和技术交流会。<br>许多城市都会举办招聘会和技术交流会，这是一个很好的了解行业动态、与公司和招聘人员交流的机会。</p>
-<p>向自己熟悉的人求助。<br>如果您有一些熟悉的朋友或前同事在相关公司工作，可以向他们求助，了解招聘情况和有关的信息。这也可能是找到合适工作的快捷方式。</p>
-<p>通过自己的作品证明能力。<br>如果您已经有一些独立完成的项目或者参与的开源项目，可以在GitHub等平台上分享您的作品，向雇主展示自己的实际能力。</p>
-<p>提高自身的技能和水平。保持不断学习和提升自身的技术能力和素养，可以增加自己在市场上的竞争力，并提高找到合适工作的机会。</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://dadongx.cn/2023/01/07/springboot-docker/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Daniel">
-      <meta itemprop="description" content="This is a amazing page !">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Daniel Hou">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2023/01/07/springboot-docker/" class="post-title-link" itemprop="url">springboot-docker</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2023-01-07 15:30:35" itemprop="dateCreated datePublished" datetime="2023-01-07T15:30:35+08:00">2023-01-07</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-02-16 23:20:50" itemprop="dateModified" datetime="2023-02-16T23:20:50+08:00">2023-02-16</time>
-              </span>
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Changyan：</span>
-    
-    
-      <a title="changyan" href="/2023/01/07/springboot-docker/#SOHUCS" itemprop="discussionUrl">
-        <span id="url::http://dadongx.cn/2023/01/07/springboot-docker/" class="cy_cmt_count" data-xid="2023/01/07/springboot-docker/" itemprop="commentCount"></span>
-      </a>
-    
-  </span>
-  
-  <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>1.3k</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="docker-run-springboot"><a href="#docker-run-springboot" class="headerlink" title="docker run springboot"></a>docker run springboot</h1><h2 id="创建springboot-项目"><a href="#创建springboot-项目" class="headerlink" title="创建springboot 项目"></a>创建springboot 项目</h2><p>创建项目 从 <a target="_blank" rel="noopener" href="https://start.spring.io/">https://start.spring.io/</a></p>
-<p>启动类配置如下：<code>src/main/java/hello/Application.java</code></p>
-<pre><code>package hello;
-
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
-
-@SpringBootApplication
-@RestController
-public class DemoApplication &#123;
-
-    public static void main(String[] args) &#123;
-        SpringApplication.run(DemoApplication.class, args);
-    &#125;
-
-    //return current time
-    @RequestMapping(&quot;/time&quot;)
-    public String time() &#123;
-        return new Date().toString();
-    &#125;
-
-&#125;</code></pre>
-<h2 id="docker-启动"><a href="#docker-启动" class="headerlink" title="docker 启动"></a>docker 启动</h2><h3 id="dockerfile-编写"><a href="#dockerfile-编写" class="headerlink" title="dockerfile 编写"></a>dockerfile 编写</h3><figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">FROM</span> openjdk:<span class="number">8</span>-jdk-alpine</span><br><span class="line"><span class="keyword">ARG</span> JAR_FILE=target/*.jar</span><br><span class="line"><span class="keyword">COPY</span><span class="bash"> <span class="variable">$&#123;JAR_FILE&#125;</span> app.jar</span></span><br><span class="line"><span class="keyword">ENTRYPOINT</span><span class="bash"> [<span class="string">&quot;java&quot;</span>,<span class="string">&quot;-jar&quot;</span>,<span class="string">&quot;/app.jar&quot;</span>]</span></span><br></pre></td></tr></table></figure>
-
-<ol>
-<li>将app.jar拷贝到容器</li>
-<li>引用 jdk</li>
-</ol>
-<h3 id="build-amp-run"><a href="#build-amp-run" class="headerlink" title="build&amp;run"></a>build&amp;run</h3><p><code>docker build -t ddx/demo</code></p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">➜  ~ docker images</span><br><span class="line">REPOSITORY   TAG       IMAGE ID       CREATED       SIZE</span><br><span class="line">ddx/demo     latest    1b4b076fd19f   2 hours ago   122MB</span><br><span class="line">mysql        latest    7484689f290f   4 weeks ago   538MB</span><br><span class="line">jenkins      2.60.3    cd14cecfdb3a   4 years ago   696MB</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p><code>docker run -p 8080:8080 </code></p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">➜  ~ docker ps</span><br><span class="line">CONTAINER ID   IMAGE      COMMAND                CREATED             STATUS             PORTS                    NAMES</span><br><span class="line">62fa2f9c4bfc   ddx/demo   <span class="string">&quot;java -jar /app.jar&quot;</span>   About an hour ago   Up About an hour   0.0.0.0:8080-&gt;8080/tcp hardcore_zhukovsky</span><br></pre></td></tr></table></figure>
-
-<p>访问 localhost:8080/time</p>
-<pre><code>➜  ~ curl localhost:8080/time
-Fri Jan 06 06:18:31 GMT 2023%</code></pre>
-<p>本文参考： <a target="_blank" rel="noopener" href="https://spring.io/guides/gs/spring-boot-docker/">https://spring.io/guides/gs/spring-boot-docker/</a></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://dadongx.cn/2023/01/06/springmvcvswebflux/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Daniel">
-      <meta itemprop="description" content="This is a amazing page !">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Daniel Hou">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2023/01/06/springmvcvswebflux/" class="post-title-link" itemprop="url">springmvcvswebflux</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2023-01-06 15:52:44" itemprop="dateCreated datePublished" datetime="2023-01-06T15:52:44+08:00">2023-01-06</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-02-17 11:31:07" itemprop="dateModified" datetime="2023-02-17T11:31:07+08:00">2023-02-17</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index"><span itemprop="name">技术</span></a>
-                </span>
-            </span>
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Changyan：</span>
-    
-    
-      <a title="changyan" href="/2023/01/06/springmvcvswebflux/#SOHUCS" itemprop="discussionUrl">
-        <span id="url::http://dadongx.cn/2023/01/06/springmvcvswebflux/" class="cy_cmt_count" data-xid="2023/01/06/springmvcvswebflux/" itemprop="commentCount"></span>
-      </a>
-    
-  </span>
-  
-  <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>869</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>Spring WebFlux 和 Spring MVC 对比分析</p>
-<p>什么是 Spring WebFlux</p>
-<p>Spring MVC is built on the Servlet API and uses a synchronous blocking I/O architecture whth a one-request-per-thread model.</p>
-<p>Spring MVC 构建于 Servlet API 之上，使用的是同步阻塞式 I/O 模型，什么是同步阻塞式 I/O 模型呢？就是说，每一个请求对应一个线程去处理。</p>
-<p>Spring WebFlux is a non-blocking web framework built from the ground up to take advantage of multi-core, next-generation processors and handle massive numbers of concurrent connections.</p>
-<p>Spring WebFlux 是一个异步非阻塞式的 Web 框架，它能够充分利用多核 CPU 的硬件资源去处理大量的并发请求。</p>
-<p>WebFlux 的优势&amp;提升性能?</p>
-<p>Reactive and non-blocking generally do not make applications run faster.</p>
-<p>WebFlux 并不能使接口的响应时间缩短，它仅仅能够提升吞吐量和伸缩性。</p>
-<p>WebFlux 应用场景</p>
-<p>PS: IO 密集型包括：磁盘IO密集型, 网络IO密集型，微服务网关就属于网络 IO 密集型，使用异步非阻塞式编程模型，能够显著地提升网关对下游服务转发的吞吐量。</p>
-<p>选 WebFlux 还是 Spring MVC?</p>
-<p>WebFlux 不是 Spring MVC 的替代方案！</p>
-<p>首先是吞吐量</p>
-<p>随着每个请求的被处理时间越长、并发请求的量级越大，WebFlux 相比 SpringMVC 的整体吞吐量高的越多，平均的请求响应时间越短。如下图所示</p>
-<p>吞吐量大了，意味着单位时间内可以处理的请求数变多了，比如原来 1w 个请求 10 秒处理完，现在 10w 个请求也是 10 秒处理完，就代表吞吐上去了。注意，是吞吐上去了，不代表单次请求快了，单次请求的速度和原来一样。</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://dadongx.cn/2023/01/06/xxb/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Daniel">
-      <meta itemprop="description" content="This is a amazing page !">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Daniel Hou">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2023/01/06/xxb/" class="post-title-link" itemprop="url">xxb-奥密克戎</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2023-01-06 15:47:17" itemprop="dateCreated datePublished" datetime="2023-01-06T15:47:17+08:00">2023-01-06</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-02-17 11:31:28" itemprop="dateModified" datetime="2023-02-17T11:31:28+08:00">2023-02-17</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="index"><span itemprop="name">学习</span></a>
-                </span>
-            </span>
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Changyan：</span>
-    
-    
-      <a title="changyan" href="/2023/01/06/xxb/#SOHUCS" itemprop="discussionUrl">
-        <span id="url::http://dadongx.cn/2023/01/06/xxb/" class="cy_cmt_count" data-xid="2023/01/06/xxb/" itemprop="commentCount"></span>
-      </a>
-    
-  </span>
-  
-  <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>183</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>XBB 奥密克戎的新版本，瞎哔哔 这病毒的名字起的真好!<br>依我看接下来疫情的走势，就冲这个名字大家一定能发大财！<br>如果人一旦正经八百，对结果很在意的时候，反而达不到预期的效果。<br>所以处在各行各业的你都要抱着瞎哔哔的心态，做好了赚钱了，是你牛批，做不好没赚到钱这一定是疫情搞得鬼！<br>作为打工人，也要保持瞎比比的松驰感，别人躺平我卷！别人卷的时候我躺平！<br>记住，瞎哔哔是一种人生态度！</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://dadongx.cn/2023/01/06/juc/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Daniel">
-      <meta itemprop="description" content="This is a amazing page !">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Daniel Hou">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2023/01/06/juc/" class="post-title-link" itemprop="url">juc-01</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2023-01-06 15:27:53" itemprop="dateCreated datePublished" datetime="2023-01-06T15:27:53+08:00">2023-01-06</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-02-17 11:30:23" itemprop="dateModified" datetime="2023-02-17T11:30:23+08:00">2023-02-17</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index"><span itemprop="name">技术</span></a>
-                </span>
-            </span>
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Changyan：</span>
-    
-    
-      <a title="changyan" href="/2023/01/06/juc/#SOHUCS" itemprop="discussionUrl">
-        <span id="url::http://dadongx.cn/2023/01/06/juc/" class="cy_cmt_count" data-xid="2023/01/06/juc/" itemprop="commentCount"></span>
-      </a>
-    
-  </span>
-  
-  <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>789</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h3 id="阶段1"><a href="#阶段1" class="headerlink" title="阶段1"></a>阶段1</h3><p>什么是JUC？<br>为什么CAS和AQS是JUC的核心？<br>ReentrantLock适用于什么场景？<br>门闩（Latch）同步器适用于什么场景？<br>篱笆（Barrier）同步器适用于什么场景？<br>信号量（Semaphore）同步器适用于什么场景？<br>阶段同步器（Phaser）适用于什么场景？<br>原生锁支持（LockSupport）适用于什么场景？<br>有哪些同步队列可以用于线程池？<br>Exchanger交换器适用于什么场景？<br>各种同步器在大厂面试中的综合运用怎么做？<br>（首次公开）通过阿里一道面试题理解大厂面试多线程代码题的要求<br>02.赢在2021年金三银四的起跑线上</p>
-<p>什么是JUC？什么是JUC？什么是JUC？什么是JUC？什么是JUC？什么是JUC？<br>为什么CAS和AQS是JUC的核心？<br>ReentrantLock适用于什么场景？<br>门闩（Latch）同步器适用于什么场景？<br>篱笆（Barrier）同步器适用于什么场景？<br>信号量（Semaphore）同步器适用于什么场景？<br>阶段同步器（Phaser）适用于什么场景？<br>原生锁支持（LockSupport）适用于什么场景？<br>有哪些同步队列可以用于线程池？<br>Exchanger交换器适用于什么场景？<br>各种同步器在大厂面试中的综合运用怎么做？<br>（首次公开）通过阿里一道面试题理解大厂面试多线程代码题的要求<br>02.赢在2021年金三银四的起跑线上</p>
-<h3 id="阶段2"><a href="#阶段2" class="headerlink" title="阶段2"></a>阶段2</h3><p>线程的本质(操作系统与CPU是如何执行线程的)<br>并发编程为什么充满挑战？<br>并发编程的三大特性：可见性、有序性、原子性<br>synchronized JMM CAS AQS lock这些高频出现的面试概念究竟是什么？<br>无锁、偏向锁、轻量级锁、重量级锁升级过程<br>悲观锁/乐观锁 共享锁/独占锁 整体锁/分段锁 可重入锁/不可重入锁<br>（首次公开）银弹已经诞生？有没有一种一定能保证线程安全的终极代码？<br>（首次公开）工作线程数，设多少最合适？如何理解N<em>C</em>(1+C/W)的计算公式?</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://dadongx.cn/2023/01/06/idea%20always%20Update%20Indices/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Daniel">
-      <meta itemprop="description" content="This is a amazing page !">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Daniel Hou">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2023/01/06/idea%20always%20Update%20Indices/" class="post-title-link" itemprop="url">Hello Hexo</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2023-01-06 15:27:53" itemprop="dateCreated datePublished" datetime="2023-01-06T15:27:53+08:00">2023-01-06</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-02-17 11:29:16" itemprop="dateModified" datetime="2023-02-17T11:29:16+08:00">2023-02-17</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index"><span itemprop="name">技术</span></a>
-                </span>
-            </span>
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Changyan：</span>
-    
-    
-      <a title="changyan" href="/2023/01/06/idea%20always%20Update%20Indices/#SOHUCS" itemprop="discussionUrl">
-        <span id="url::http://dadongx.cn/2023/01/06/idea%20always%20Update%20Indices/" class="cy_cmt_count" data-xid="2023/01/06/idea always Update Indices/" itemprop="commentCount"></span>
-      </a>
-    
-  </span>
-  
-  <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>253</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="idea-always-Update-Indices"><a href="#idea-always-Update-Indices" class="headerlink" title="idea always Update Indices"></a>idea always Update Indices</h1><h2 id="Open-IntelliJ-IDEA"><a href="#Open-IntelliJ-IDEA" class="headerlink" title="Open IntelliJ IDEA."></a>Open IntelliJ IDEA.</h2><ol>
-<li>Select the File menu.</li>
-<li>Select the Invalidate Caches / Restart… menu. Once selected you get a pop-up with a bunch of options.</li>
-<li>Select Invalidate and Restart. and before doing that make sure you saved all your changes else it might delete some unsaved changes.</li>
-</ol>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://dadongx.cn/2023/01/05/springboot-docker-demo/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Daniel">
-      <meta itemprop="description" content="This is a amazing page !">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Daniel Hou">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2023/01/05/springboot-docker-demo/" class="post-title-link" itemprop="url">springboot-docker-demo</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2023-01-05 14:21:01" itemprop="dateCreated datePublished" datetime="2023-01-05T14:21:01+08:00">2023-01-05</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-02-17 11:31:04" itemprop="dateModified" datetime="2023-02-17T11:31:04+08:00">2023-02-17</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index"><span itemprop="name">技术</span></a>
-                </span>
-            </span>
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Changyan：</span>
-    
-    
-      <a title="changyan" href="/2023/01/05/springboot-docker-demo/#SOHUCS" itemprop="discussionUrl">
-        <span id="url::http://dadongx.cn/2023/01/05/springboot-docker-demo/" class="cy_cmt_count" data-xid="2023/01/05/springboot-docker-demo/" itemprop="commentCount"></span>
-      </a>
-    
-  </span>
-  
-  <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>1.3k</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p> docker run springboot</p>
-<h2 id="创建springboot-项目"><a href="#创建springboot-项目" class="headerlink" title="创建springboot 项目"></a>创建springboot 项目</h2><p>创建项目 从 <a target="_blank" rel="noopener" href="https://start.spring.io/">https://start.spring.io/</a></p>
-<p>启动类配置如下：<code>src/main/java/hello/Application.java</code></p>
-<pre><code>package hello;
-
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
-
-@SpringBootApplication
-@RestController
-public class DemoApplication &#123;
-
-    public static void main(String[] args) &#123;
-        SpringApplication.run(DemoApplication.class, args);
-    &#125;
-
-    //return current time
-    @RequestMapping(&quot;/time&quot;)
-    public String time() &#123;
-        return new Date().toString();
-    &#125;
-
-&#125;</code></pre>
-<h2 id="docker-启动"><a href="#docker-启动" class="headerlink" title="docker 启动"></a>docker 启动</h2><h3 id="dockerfile-编写"><a href="#dockerfile-编写" class="headerlink" title="dockerfile 编写"></a>dockerfile 编写</h3><figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">FROM</span> openjdk:<span class="number">8</span>-jdk-alpine</span><br><span class="line"><span class="keyword">ARG</span> JAR_FILE=target/*.jar</span><br><span class="line"><span class="keyword">COPY</span><span class="bash"> <span class="variable">$&#123;JAR_FILE&#125;</span> app.jar</span></span><br><span class="line"><span class="keyword">ENTRYPOINT</span><span class="bash"> [<span class="string">&quot;java&quot;</span>,<span class="string">&quot;-jar&quot;</span>,<span class="string">&quot;/app.jar&quot;</span>]</span></span><br></pre></td></tr></table></figure>
-
-<ol>
-<li>将app.jar拷贝到容器</li>
-<li>引用 jdk</li>
-</ol>
-<h3 id="build-amp-run"><a href="#build-amp-run" class="headerlink" title="build&amp;run"></a>build&amp;run</h3><p><code>docker build -t ddx/demo</code></p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">➜  ~ docker images</span><br><span class="line">REPOSITORY   TAG       IMAGE ID       CREATED       SIZE</span><br><span class="line">ddx/demo     latest    1b4b076fd19f   2 hours ago   122MB</span><br><span class="line">mysql        latest    7484689f290f   4 weeks ago   538MB</span><br><span class="line">jenkins      2.60.3    cd14cecfdb3a   4 years ago   696MB</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p><code>docker run -p 8080:8080 </code></p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">➜  ~ docker ps</span><br><span class="line">CONTAINER ID   IMAGE      COMMAND                CREATED             STATUS             PORTS                    NAMES</span><br><span class="line">62fa2f9c4bfc   ddx/demo   <span class="string">&quot;java -jar /app.jar&quot;</span>   About an hour ago   Up About an hour   0.0.0.0:8080-&gt;8080/tcp hardcore_zhukovsky</span><br></pre></td></tr></table></figure>
-
-<p>访问 localhost:8080/time</p>
-<pre><code>➜  ~ curl localhost:8080/time
-Fri Jan 06 06:18:31 GMT 2023%</code></pre>
-<p>本文参考： <a target="_blank" rel="noopener" href="https://spring.io/guides/gs/spring-boot-docker/">https://spring.io/guides/gs/spring-boot-docker/</a></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-
-  
-  <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
-  </nav>
-
-
-
-          </div>
-          
-
+</header>
 <script>
-  window.addEventListener('tabs:register', () => {
-    let { activeClass } = CONFIG.comments;
-    if (CONFIG.comments.storage) {
-      activeClass = localStorage.getItem('comments_active') || activeClass;
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
+        var mobileMenu = document.getElementById("mobile-menu");
+        if(toggleMenu.classList.contains("active")){
+           toggleMenu.classList.remove("active")
+            mobileMenu.classList.remove("active")
+        }else{
+            toggleMenu.classList.add("active")
+            mobileMenu.classList.add("active")
+        }
     }
-    if (activeClass) {
-      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
-      if (activeTab) {
-        activeTab.click();
-      }
-    }
-  });
-  if (CONFIG.comments.storage) {
-    window.addEventListener('tabs:click', event => {
-      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
-      let commentClass = event.target.classList[1];
-      localStorage.setItem('comments_active', commentClass);
-    });
-  }
 </script>
-
+            <div class="main">
+                
+    <div class="container profile-container">
+    <div class="intro">
+        <div class="avatar">
+            <a href="/"><img src="/image/daniel.jpeg"></a>
         </div>
-          
-  
-  <div class="toggle sidebar-toggle">
-    <span class="toggle-line toggle-line-first"></span>
-    <span class="toggle-line toggle-line-middle"></span>
-    <span class="toggle-line toggle-line-last"></span>
-  </div>
-
-  <aside class="sidebar">
-    <div class="sidebar-inner">
-
-      <ul class="sidebar-nav motion-element">
-        <li class="sidebar-nav-toc">
-          文章目录
-        </li>
-        <li class="sidebar-nav-overview">
-          站点概览
-        </li>
-      </ul>
-
-      <!--noindex-->
-      <div class="post-toc-wrap sidebar-panel">
-      </div>
-      <!--/noindex-->
-
-      <div class="site-overview-wrap sidebar-panel">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-  <p class="site-author-name" itemprop="name">Daniel</p>
-  <div class="site-description" itemprop="description">This is a amazing page !</div>
+        <div class="nickname">Daniel Hou</div>
+        <div class="description"><p>Less is more, <strong>Stay hungry，Stay foolish.</strong> <br><em>聚焦，专注，死磕，执行</em></p>
 </div>
-<div class="site-state-wrap motion-element">
-  <nav class="site-state">
-      <div class="site-state-item site-state-posts">
-          <a href="/archives/">
-        
-          <span class="site-state-item-count">20</span>
-          <span class="site-state-item-name">日志</span>
-        </a>
-      </div>
-      <div class="site-state-item site-state-categories">
-        <span class="site-state-item-count">5</span>
-        <span class="site-state-item-name">分类</span>
-      </div>
-      <div class="site-state-item site-state-tags">
-            <a href="/tags/">
-        <span class="site-state-item-count">21</span>
-        <span class="site-state-item-name">标签</span></a>
-      </div>
-  </nav>
+        <div class="links">
+            
+                
+                    <a class="link-item" title="Blog" href="/archives">
+                        
+                        
+                            <i class="iconfont icon-blog"></i>
+                        
+                    </a>
+                
+                    <a class="link-item" title="ZhiHu" target="_blank" rel="noopener" href="https://www.zhihu.com/people/HoldQPro">
+                        
+                        
+                            <i class="iconfont icon-zhihu"></i>
+                        
+                    </a>
+                
+                    <a class="link-item" title="Twitter" target="_blank" rel="noopener" href="https://twitter.com/thedanielhou">
+                        
+                        
+                            <i class="iconfont icon-twitter"></i>
+                        
+                    </a>
+                
+                    <a class="link-item" title="Instagram" href="">
+                        
+                        
+                            <i class="iconfont icon-instagram"></i>
+                        
+                    </a>
+                
+                    <a class="link-item" title="Reddit" href="">
+                        
+                        
+                            <i class="iconfont icon-reddit"></i>
+                        
+                    </a>
+                
+                    <a class="link-item" title="Github" target="_blank" rel="noopener" href="https://github.com/houdq">
+                        
+                        
+                            <i class="iconfont icon-github"></i>
+                        
+                    </a>
+                
+            
+        </div>
+    </div>
 </div>
 
 
-
-      </div>
+            </div>
+            <footer id="footer" class="footer">
+    <div class="copyright">
+        <span>© Daniel | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span>
+    </div>
+</footer>
 
     </div>
-  </aside>
-  <div id="sidebar-dimmer"></div>
 
-
-      </div>
-    </main>
-
-    <footer class="footer">
-      <div class="footer-inner">
-        
-
-        
-
-<div class="copyright">
-  
-  &copy; 
-  <span itemprop="copyrightYear">2023</span>
-  <span class="with-love">
-    <i class="fa fa-heart"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">Daniel</span>
-    <span class="post-meta-divider">|</span>
-    <span class="post-meta-item-icon">
-      <i class="fa fa-chart-area"></i>
-    </span>
-    <span title="站点总字数">12k</span>
-    <span class="post-meta-divider">|</span>
-    <span class="post-meta-item-icon">
-      <i class="fa fa-coffee"></i>
-    </span>
-    <span title="站点阅读时长">11 分钟</span>
-</div>
-  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
-  </div>
-
-        
-<div class="busuanzi-count">
-  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
-      <span class="post-meta-item-icon">
-        <i class="fa fa-user"></i>
-      </span>
-      <span class="site-uv" title="总访客量">
-        <span id="busuanzi_value_site_uv"></span>
-      </span>
-    </span>
-    <span class="post-meta-divider">|</span>
-    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
-      <span class="post-meta-item-icon">
-        <i class="fa fa-eye"></i>
-      </span>
-      <span class="site-pv" title="总访问量">
-        <span id="busuanzi_value_site_pv"></span>
-      </span>
-    </span>
-</div>
-
-
-
-
-
-
-
-
-      </div>
-    </footer>
-  </div>
-
-  
-  <script src="/lib/anime.min.js"></script>
-  <script src="/lib/velocity/velocity.min.js"></script>
-  <script src="/lib/velocity/velocity.ui.min.js"></script>
-
-<script src="/js/utils.js"></script>
-
-<script src="/js/motion.js"></script>
-
-
-<script src="/js/schemes/pisces.js"></script>
-
-
-<script src="/js/next-boot.js"></script>
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-  
-
-  <script id="cy_cmt_num" src="https://changyan.sohu.com/upload/plugins/plugins.list.count.js?clientId=cyvb3sIqI"></script>
-
-
+    <!-- coffe -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9133307610871547" data-ad-slot="5979973429" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+        console.log("google ads ok...")
+    </script>
 </body>
+
 </html>
