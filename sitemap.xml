@@ -284,20 +284,6 @@
   </url>
   
   <url>
-    <loc>http://dadongx.cn/tags/%E6%8C%A3%E9%92%B1/</loc>
-    <lastmod>2023-02-17</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://dadongx.cn/tags/%E5%86%85%E5%AE%B9/</loc>
-    <lastmod>2023-02-17</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://dadongx.cn/tags/life/</loc>
     <lastmod>2023-02-17</lastmod>
     <changefreq>daily</changefreq>
@@ -320,6 +306,20 @@
   
   <url>
     <loc>http://dadongx.cn/tags/weblux/</loc>
+    <lastmod>2023-02-17</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://dadongx.cn/tags/%E6%8C%A3%E9%92%B1/</loc>
+    <lastmod>2023-02-17</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://dadongx.cn/tags/%E5%86%85%E5%AE%B9/</loc>
     <lastmod>2023-02-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
