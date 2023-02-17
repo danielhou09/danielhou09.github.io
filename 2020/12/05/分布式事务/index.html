@@ -20,7 +20,7 @@
                                 
                                     <title>
                                         
-                                            分布式事务 |
+                                            面向对象设计六大原则 |
                                                 
                                                     Daniel Hou
                                     </title>
@@ -54,6 +54,18 @@
                                                                                                                             
                                                                                                                                 
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9133307610871547" crossorigin="anonymous"></script>
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-9P7FFGKWT3"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag('js', new Date());
+
+            gtag('config', 'G-9P7FFGKWT3');
+        </script>
 <meta name="generator" content="Hexo 5.2.0"></head>
 
 <body>
@@ -133,76 +145,11 @@
                 <div class="container">
     
     
-        <div class="post-toc">
-    <div class="tocbot-list">
-    </div>
-    <div class="tocbot-list-menu">
-        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
-        <a onclick="go_top()">Back to top</a>
-        <a onclick="go_bottom()">Go to bottom</a>
-    </div>
-</div>
-
-<script>
-    var tocbot_timer;
-    var DEPTH_MAX = 6; // 为 6 时展开所有
-    var tocbot_default_config = {
-        tocSelector: '.tocbot-list',
-        contentSelector: '.post-content',
-        headingSelector: 'h1, h2, h3, h4, h5',
-        orderedList: false,
-        scrollSmooth: true,
-        onClick: extend_click,
-    };
-
-    function extend_click() {
-        clearTimeout(tocbot_timer);
-        tocbot_timer = setTimeout(function() {
-            tocbot.refresh(obj_merge(tocbot_default_config, {
-                hasInnerContainers: true
-            }));
-        }, 420); // 这个值是由 tocbot 源码里定义的 scrollSmoothDuration 得来的
-    }
-
-    document.ready(function() {
-        tocbot.init(obj_merge(tocbot_default_config, {
-            collapseDepth: 1
-        }));
-    });
-
-    function expand_toc() {
-        var b = document.querySelector('.tocbot-toc-expand');
-        var expanded = b.getAttribute('data-expanded');
-        expanded ? b.removeAttribute('data-expanded') : b.setAttribute('data-expanded', true);
-        tocbot.refresh(obj_merge(tocbot_default_config, {
-            collapseDepth: expanded ? 1 : DEPTH_MAX
-        }));
-        b.innerText = expanded ? 'Expand all' : 'Collapse all';
-    }
-
-    function go_top() {
-        window.scrollTo(0, 0);
-    }
-
-    function go_bottom() {
-        window.scrollTo(0, document.body.scrollHeight);
-    }
-
-    function obj_merge(target, source) {
-        for (var item in source) {
-            if (source.hasOwnProperty(item)) {
-                target[item] = source[item];
-            }
-        }
-        return target;
-    }
-</script>
-    
 
     
     <article class="post-wrap">
         <header class="post-header">
-            <h1 class="post-title">分布式事务</h1>
+            <h1 class="post-title">面向对象设计六大原则</h1>
             
                 <div class="post-meta">
                     
@@ -227,7 +174,35 @@
         </header>
 
         <div class="post-content">
-            <h1 id="分布式事务"><a href="#分布式事务" class="headerlink" title="分布式事务"></a>分布式事务</h1><h2 id="水电费dd"><a href="#水电费dd" class="headerlink" title="水电费dd"></a>水电费dd</h2><h3 id="Seata"><a href="#Seata" class="headerlink" title="Seata"></a>Seata</h3>
+            <p>面向对象设计六大原则</p>
+<ol>
+<li>里式替换原则<ul>
+<li>多态，子类可扩展⽗类</li>
+</ul>
+</li>
+<li>开闭原则<ul>
+<li>抽象架构，扩展实现 （对修改关闭，对扩展开放） 继承父类扩展需要的方法，同时保留原有的方法，新增自己需要的方法</li>
+</ul>
+</li>
+<li>依赖倒置原则<ul>
+<li>实现开闭原则的重要途径之一，它降低了客户与实现模块之间的耦合</li>
+<li>细节依赖抽象，下层依赖上层</li>
+</ul>
+</li>
+<li>迪⽶特法则原则<ul>
+<li>最少知道，降低耦合</li>
+</ul>
+</li>
+<li>接口隔离原则<ul>
+<li>建⽴单⼀接⼝，尽量将庞大的接口拆分成更小&amp;更具体的接口</li>
+</ul>
+</li>
+<li>单一职责原则<ul>
+<li>⼀个类和方法只做⼀件事</li>
+</ul>
+</li>
+</ol>
+
         </div>
 
         
