@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://dadongx.cn/2021/02/18/hello-springboot/</loc>
+    
+    <lastmod>2023-02-18</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://dadongx.cn/about/index.html</loc>
     
     <lastmod>2023-02-18</lastmod>
@@ -362,6 +369,13 @@
   
   <url>
     <loc>http://dadongx.cn/tags/sdudy/</loc>
+    <lastmod>2023-02-18</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://dadongx.cn/tags/springboot/</loc>
     <lastmod>2023-02-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
