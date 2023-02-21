@@ -20,7 +20,7 @@
                                 
                                     <title>
                                         
-                                            归档: 2023/2 |
+                                            创建1000w测试数据 |
                                                 
                                                     Daniel Hou
                                     </title>
@@ -142,93 +142,110 @@
     }
 </script>
             <div class="main">
-                <div class="post-wrap archive">
-    
-    
-        
-
-        
-            <h3>2023</h3>
-        
-
-        <article class="archive-item">
-            <a class="archive-item-link" href="/2023/02/21/testdatas/">创建1000w测试数据</a>
-            <span class="archive-item-date">二月 21, 2023</span>
-        </article>
+                <div class="container">
     
         
 
-        
+                    
+                        <article class="post-wrap">
+                            <header class="post-header">
+                                <h1 class="post-title">
+                                    创建1000w测试数据
+                                </h1>
+                                
+                                    <div class="post-meta">
+                                        
+                                            Author:
+                                            <a itemprop="author" rel="author" href="/">
+                                                Daniel
+                                            </a>
+                                            
 
-        <article class="archive-item">
-            <a class="archive-item-link" href="/2023/02/20/cache/">缓存的本质和缓存实践</a>
-            <span class="archive-item-date">二月 20, 2023</span>
-        </article>
-    
-        
+                                                
+                                                    <span class="post-time">
+                        Date: <a href="#">二月 21, 2023&nbsp;&nbsp;17:25:38</a>
+                        </span>
+                                                    
+                                                        
+                                                            <span class="post-category">
+                    Category:
+                            
+                                <a href="/categories/%E6%8A%80%E6%9C%AF/">技术</a>
+                            
+                        </span>
+                                                            
+                                    </div>
+                                    
+                            </header>
 
-        
+                            <div class="post-content">
+                                <p>假如需要创建1000w 测试数据的话,可以尝试使用存储过程.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">CREATE TABLE &#96;data&#96; </span><br><span class="line">(</span><br><span class="line">  &#96;id&#96;         bigint(20) NOT NULL      AUTO_INCREMENT,</span><br><span class="line">  &#96;datetime&#96;   timestamp  NULL          DEFAULT CURRENT_TIMESTAMP,</span><br><span class="line">  &#96;channel&#96;    int(11)                  DEFAULT NULL,</span><br><span class="line">  &#96;value&#96;      float                    DEFAULT NULL,</span><br><span class="line"></span><br><span class="line">  PRIMARY KEY (&#96;id&#96;)</span><br><span class="line">);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">CREATE PROCEDURE generate_data(IN n int)</span><br><span class="line">BEGIN</span><br><span class="line">  DECLARE i INT DEFAULT 0;</span><br><span class="line">  WHILE i &lt; n DO</span><br><span class="line">    INSERT INTO &#96;data&#96; (&#96;datetime&#96;,&#96;value&#96;,&#96;channel&#96;) VALUES (</span><br><span class="line">      FROM_UNIXTIME(UNIX_TIMESTAMP(&#39;2014-01-01 01:00:00&#39;)+FLOOR(RAND()*31536000)),</span><br><span class="line">      ROUND(RAND()*100,2),</span><br><span class="line">      1</span><br><span class="line">    );</span><br><span class="line">    SET i &#x3D; i + 1;</span><br><span class="line">  END WHILE;</span><br><span class="line"></span><br><span class="line">  CALL generate_data(10000);</span><br><span class="line"> </span><br></pre></td></tr></table></figure>
 
-        <article class="archive-item">
-            <a class="archive-item-link" href="/2023/02/20/liquidate/">如何知识变现</a>
-            <span class="archive-item-date">二月 20, 2023</span>
-        </article>
-    
-        
+<p>删除存储过程执行如下:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">DROP PROCEDURE generate_data;</span><br></pre></td></tr></table></figure>
 
-        
 
-        <article class="archive-item">
-            <a class="archive-item-link" href="/2023/02/18/studyformdiffrence/">从难点中学习</a>
-            <span class="archive-item-date">二月 18, 2023</span>
-        </article>
-    
-        
 
-        
+                            </div>
 
-        <article class="archive-item">
-            <a class="archive-item-link" href="/2023/02/17/anxiety/">35岁程序员如何摆脱焦虑?</a>
-            <span class="archive-item-date">二月 17, 2023</span>
-        </article>
-    
-        
+                            <!-- 
+                                <section class="post-copyright">
+                                    
+                                        <p class="copyright-item">
+                                            <span>Author:</span>
+                                            <span>Daniel</span>
+                                        </p>
+                                         -->
+                            <!-- 
+                    <p class="copyright-item">
+                        <span>Permalink:</span>
+                        <span><a href="http://dadongx.cn/2023/02/21/testdatas/">http://dadongx.cn/2023/02/21/testdatas/</a></span>
+                    </p>
+                
+                
+                    <p class="copyright-item">
+                        <span>License:</span>
+                        <span>Copyright (c) 2019 <a target="_blank" rel="noopener" href="http://creativecommons.org/licenses/by-nc/4.0/">CC-BY-NC-4.0</a> LICENSE</span>
+                    </p>
+                
+                
+                     <p class="copyright-item">
+                         <span>Slogan:</span>
+                         <span>Do you believe in <strong>DESTINY</strong>?</span>
+                     </p>
+                 -->
 
-        
+                            </section>
+                            
+                                <section class="post-tags">
+                                    <div>
+                                        <span>Tag(s):</span>
+                                        <span class="tag">
+                    
+                    
+                        <a href="/tags/%E6%B5%8B%E8%AF%95/"># 测试</a>
+                    
+                        
+                </span>
+                                    </div>
+                                    <div>
+                                        <a href="javascript:window.history.back();">back</a>
+                                        <span>· </span>
+                                        <a href="/">home</a>
+                                    </div>
+                                </section>
+                                <section class="post-nav">
+                                    
+                                            
+                                                <a class="next" rel="next" href="/2023/02/20/cache/">
+                                                    缓存的本质和缓存实践
+                                                </a>
+                                                
+                                </section>
 
-        <article class="archive-item">
-            <a class="archive-item-link" href="/2023/02/17/restart/">重启</a>
-            <span class="archive-item-date">二月 17, 2023</span>
-        </article>
-    
-        
 
-        
-
-        <article class="archive-item">
-            <a class="archive-item-link" href="/2023/02/16/target/">我的规划</a>
-            <span class="archive-item-date">二月 16, 2023</span>
-        </article>
-    
-        
-
-        
-
-        <article class="archive-item">
-            <a class="archive-item-link" href="/2023/02/15/java-%E4%B8%AD%E7%9A%84%E9%94%81%E8%A7%A3%E5%86%B3%E4%BB%80%E4%B9%88%E9%97%AE%E9%A2%98/">java 中的锁解决什么问题?</a>
-            <span class="archive-item-date">二月 15, 2023</span>
-        </article>
-    
-        
-
-        
-
-        <article class="archive-item">
-            <a class="archive-item-link" href="/2023/02/15/java%E6%80%8E%E6%89%BE%E5%B7%A5%E4%BD%9C/">java怎找工作</a>
-            <span class="archive-item-date">二月 15, 2023</span>
-        </article>
-    
-    
+                        </article>
 </div>
             </div>
             <footer id="footer" class="footer">

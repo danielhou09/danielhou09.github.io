@@ -4,6 +4,56 @@
   
     
     <entry>
+      <title>创建1000w测试数据</title>
+      <link href="2023/02/21/testdatas/"/>
+      <url>2023/02/21/testdatas/</url>
+      
+        <content type="html"><![CDATA[<p>假如需要创建1000w 测试数据的话,可以尝试使用存储过程.</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">CREATE TABLE &#96;data&#96; </span><br><span class="line">(</span><br><span class="line">  &#96;id&#96;         bigint(20) NOT NULL      AUTO_INCREMENT,</span><br><span class="line">  &#96;datetime&#96;   timestamp  NULL          DEFAULT CURRENT_TIMESTAMP,</span><br><span class="line">  &#96;channel&#96;    int(11)                  DEFAULT NULL,</span><br><span class="line">  &#96;value&#96;      float                    DEFAULT NULL,</span><br><span class="line"></span><br><span class="line">  PRIMARY KEY (&#96;id&#96;)</span><br><span class="line">);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">CREATE PROCEDURE generate_data(IN n int)</span><br><span class="line">BEGIN</span><br><span class="line">  DECLARE i INT DEFAULT 0;</span><br><span class="line">  WHILE i &lt; n DO</span><br><span class="line">    INSERT INTO &#96;data&#96; (&#96;datetime&#96;,&#96;value&#96;,&#96;channel&#96;) VALUES (</span><br><span class="line">      FROM_UNIXTIME(UNIX_TIMESTAMP(&#39;2014-01-01 01:00:00&#39;)+FLOOR(RAND()*31536000)),</span><br><span class="line">      ROUND(RAND()*100,2),</span><br><span class="line">      1</span><br><span class="line">    );</span><br><span class="line">    SET i &#x3D; i + 1;</span><br><span class="line">  END WHILE;</span><br><span class="line"></span><br><span class="line">  CALL generate_data(10000);</span><br><span class="line"> </span><br></pre></td></tr></table></figure><p>删除存储过程执行如下:</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">DROP PROCEDURE generate_data;</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> 技术 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 测试 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>缓存的本质和缓存实践</title>
+      <link href="2023/02/20/cache/"/>
+      <url>2023/02/20/cache/</url>
+      
+        <content type="html"><![CDATA[<h2 id="为什么要用缓存"><a href="#为什么要用缓存" class="headerlink" title="为什么要用缓存?"></a>为什么要用缓存?</h2><h3 id="缓存的本质"><a href="#缓存的本质" class="headerlink" title="缓存的本质"></a>缓存的本质</h3><blockquote><p>通俗理解计算机缓存,可以比喻成水库.</p></blockquote><h3 id="CPU缓存和系统机构缓存"><a href="#CPU缓存和系统机构缓存" class="headerlink" title="CPU缓存和系统机构缓存"></a>CPU缓存和系统机构缓存</h3><h2 id="缓存编程实现"><a href="#缓存编程实现" class="headerlink" title="缓存编程实现"></a>缓存编程实现</h2><h3 id="编程法"><a href="#编程法" class="headerlink" title="编程法"></a>编程法</h3><p>采用各种reis 客户端和 API.比如Jredis api</p><h3 id="Spring-注入"><a href="#Spring-注入" class="headerlink" title="Spring 注入"></a>Spring 注入</h3><p>Spring Data Redis 是 Spring Data 家族的一个项目，它为 Spring 应用程序提供了与 Redis 数据存储交互的支持。Spring Data Redis 通过 RedisTemplate 和 RedisConnectionFactory 为 Redis 提供了高级的 Redis 操作接口。</p><ul><li><p>添加依赖</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;org.springframework.boot&lt;&#x2F;groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;spring-boot-starter-data-redis&lt;&#x2F;artifactId&gt;</span><br><span class="line">&lt;&#x2F;dependency&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure></li><li><p>RedisTemplate源码</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">@Autowired</span><br><span class="line">private RedisTemplate&lt;String, Object&gt; redisTemplate;</span><br><span class="line"></span><br><span class="line">public void setValue(String key, Object value) &#123;</span><br><span class="line">    redisTemplate.opsForValue().set(key, value);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">public Object getValue(String key) &#123;</span><br><span class="line">    return redisTemplate.opsForValue().get(key);</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure></li><li><p>注入RedisTemplate</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">import org.springframework.beans.factory.annotation.Autowired;</span><br><span class="line">import org.springframework.data.redis.core.RedisTemplate;</span><br><span class="line">import org.springframework.stereotype.Component;</span><br><span class="line"></span><br><span class="line">@Component</span><br><span class="line">public class RedisService &#123;</span><br><span class="line"></span><br><span class="line">    @Autowired</span><br><span class="line">    private RedisTemplate&lt;String, String&gt; redisTemplate;</span><br><span class="line"></span><br><span class="line">    public void setValue(String key, String value) &#123;</span><br><span class="line">        redisTemplate.opsForValue().set(key, value);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public String getValue(String key) &#123;</span><br><span class="line">        return redisTemplate.opsForValue().get(key);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li></ul><h3 id="注解法"><a href="#注解法" class="headerlink" title="注解法"></a>注解法</h3><p>如果你用 springboot,使用 @Cacheable 注解来实现 Redis 缓存非常简单，您只需要按照以下步骤即可：</p><ol><li><p>添加依赖：首先，在 pom.xml 文件中添加 spring-boot-starter-cache 和 spring-boot-starter-data-redis 依赖。</p></li><li><p>配置 Redis：在 application.properties 或 application.yml 文件中配置 Redis 连接信息。</p></li><li><p>创建缓存配置：在您的应用程序中创建一个缓存配置类，并使用 @Configuration 和 @EnableCaching 注解进行标注。在这个类中，您可以使用 CacheManagerBuilder.build() 方法来创建一个 RedisCacheManager 对象。</p></li><li><p>使用 @Cacheable：在需要缓存的方法上使用 @Cacheable 注解，指定缓存名称以及需要缓存的数据 key。<br>下面是一个使用 @Cacheable 注解来实现 Redis 缓存的示例：</p></li></ol><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">@Service</span><br><span class="line">public class UserService &#123;</span><br><span class="line"></span><br><span class="line">    @Autowired</span><br><span class="line">    private UserRepository userRepository;</span><br><span class="line"></span><br><span class="line">    @Cacheable(value &#x3D; &quot;user&quot;, key &#x3D; &quot;#id&quot;)</span><br><span class="line">    public User getUserById(Long id) &#123;</span><br><span class="line">        return userRepository.findById(id).orElse(null);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F; 其他业务方法...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h2 id="访问缓存的模式"><a href="#访问缓存的模式" class="headerlink" title="访问缓存的模式"></a>访问缓存的模式</h2><h3 id="双读双写"><a href="#双读双写" class="headerlink" title="双读双写"></a>双读双写</h3><p>一般采用这种写法<br><img src="https://user-images.githubusercontent.com/9412449/220018370-696f2a8d-440e-4a83-8d97-c7d058a5b362.png" alt="image"></p><h2 id="异步更新"><a href="#异步更新" class="headerlink" title="异步更新"></a>异步更新</h2><p><img src="https://user-images.githubusercontent.com/9412449/220019055-6353b1e1-80b4-473a-83d5-56df60182373.png" alt="image"></p><h2 id="串联模式"><a href="#串联模式" class="headerlink" title="串联模式"></a>串联模式</h2><p><img src="https://user-images.githubusercontent.com/9412449/220019109-48d675d4-fd23-44b0-887f-67e11772df34.png" alt="image"></p><!--  --><h2 id="分片模式"><a href="#分片模式" class="headerlink" title="分片模式"></a>分片模式</h2><h3 id="客户端分片"><a href="#客户端分片" class="headerlink" title="客户端分片"></a>客户端分片</h3><h3 id="代理分片"><a href="#代理分片" class="headerlink" title="代理分片"></a>代理分片</h3><h3 id="集群分片"><a href="#集群分片" class="headerlink" title="集群分片"></a>集群分片</h3><h2 id="迁移方案"><a href="#迁移方案" class="headerlink" title="迁移方案"></a>迁移方案</h2><h3 id="平滑迁移"><a href="#平滑迁移" class="headerlink" title="平滑迁移"></a>平滑迁移</h3><h3 id="一致性哈希"><a href="#一致性哈希" class="headerlink" title="一致性哈希"></a>一致性哈希</h3>]]></content>
+      
+      
+      <categories>
+          
+          <category> 技术 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> cache </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>如何知识变现</title>
       <link href="2023/02/20/liquidate/"/>
       <url>2023/02/20/liquidate/</url>
