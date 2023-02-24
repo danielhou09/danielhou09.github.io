@@ -20,7 +20,7 @@
                                 
                                     <title>
                                         
-                                            为什么禁用&#34;select * &#34; |
+                                            学习是在学什么 |
                                                 
                                                     Daniel Hou
                                     </title>
@@ -145,12 +145,77 @@
                 <div class="container">
     
         
+            <div class="post-toc">
+    <div class="tocbot-list">
+    </div>
+    <div class="tocbot-list-menu">
+        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
+        <a onclick="go_top()">Back to top</a>
+        <a onclick="go_bottom()">Go to bottom</a>
+    </div>
+</div>
+
+<script>
+    var tocbot_timer;
+    var DEPTH_MAX = 6; // 为 6 时展开所有
+    var tocbot_default_config = {
+        tocSelector: '.tocbot-list',
+        contentSelector: '.post-content',
+        headingSelector: 'h1, h2, h3, h4, h5',
+        orderedList: false,
+        scrollSmooth: true,
+        onClick: extend_click,
+    };
+
+    function extend_click() {
+        clearTimeout(tocbot_timer);
+        tocbot_timer = setTimeout(function() {
+            tocbot.refresh(obj_merge(tocbot_default_config, {
+                hasInnerContainers: true
+            }));
+        }, 420); // 这个值是由 tocbot 源码里定义的 scrollSmoothDuration 得来的
+    }
+
+    document.ready(function() {
+        tocbot.init(obj_merge(tocbot_default_config, {
+            collapseDepth: 1
+        }));
+    });
+
+    function expand_toc() {
+        var b = document.querySelector('.tocbot-toc-expand');
+        var expanded = b.getAttribute('data-expanded');
+        expanded ? b.removeAttribute('data-expanded') : b.setAttribute('data-expanded', true);
+        tocbot.refresh(obj_merge(tocbot_default_config, {
+            collapseDepth: expanded ? 1 : DEPTH_MAX
+        }));
+        b.innerText = expanded ? 'Expand all' : 'Collapse all';
+    }
+
+    function go_top() {
+        window.scrollTo(0, 0);
+    }
+
+    function go_bottom() {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
+    function obj_merge(target, source) {
+        for (var item in source) {
+            if (source.hasOwnProperty(item)) {
+                target[item] = source[item];
+            }
+        }
+        return target;
+    }
+</script>
+                
 
                     
                         <article class="post-wrap">
                             <header class="post-header">
                                 <h1 class="post-title">
-                                    为什么禁用&#34;select * &#34;
+                                    学习是在学什么
                                 </h1>
                                 
                                     <div class="post-meta">
@@ -163,14 +228,14 @@
 
                                                 
                                                     <span class="post-time">
-                        Date: <a href="#">二月 22, 2023&nbsp;&nbsp;13:54:33</a>
+                        Date: <a href="#">二月 24, 2023&nbsp;&nbsp;8:55:09</a>
                         </span>
                                                     
                                                         
                                                             <span class="post-category">
                     Category:
                             
-                                <a href="/categories/%E6%8A%80%E6%9C%AF/">技术</a>
+                                <a href="/categories/study/">study</a>
                             
                         </span>
                                                             
@@ -179,10 +244,11 @@
                             </header>
 
                             <div class="post-content">
-                                <p>SELECT * 是一种 SQL 查询语句，表示从指定的表中选择所有列。虽然 SELECT * 可以返回表中的所有数据，但这种查询方法可能会导致一些问题：</p>
-<p>不必要的网络流量：如果一张表有很多列，而且你只需要其中的一部分，使用 SELECT * 会将所有列的数据都传输到客户端，增加了不必要的网络流量。</p>
-<p>减缓查询速度：如果查询的表中有很多列，而且你只需要其中的一部分，使用 SELECT * 可能会减缓查询的速度，因为数据库需要检索和传输多余的数据。</p>
-<p>查询结果不可预测：如果表的结构发生了变化，例如增加或删除了一些列，使用 SELECT * 会返回新的结构，导致你的代码需要重新调整来适应这些变化。</p>
+                                <p>我们不只是在求学过程中学习,从我们来到世上之后,从家庭,学校,社会上一直在主动或者被动接受各种知识,那么我们是为什么学习呢?</p>
+<h2 id="知识改变命运"><a href="#知识改变命运" class="headerlink" title="知识改变命运"></a>知识改变命运</h2><p>有人说我就是为了考大学,考了大学为了找好工作,工作学习是为了涨工资,等等等等,其实都对那么本质是为啥呢?都说高考是唯一一次公平的竞争,底层人民的孩子改变命运的唯一一次翻牌的机会了.  改变命运之后呢?</p>
+<h2 id="为了看清世界"><a href="#为了看清世界" class="headerlink" title="为了看清世界"></a>为了看清世界</h2><p>我们不只是在求学过程中学习,在我们来到世上之后,从家庭学校社会上一直再主动或者被动接受各种知识,有客观的自然规律,有人问的艺术细胞,还有人类智慧结晶.<br>最终都将是我们成为更好的自己.</p>
+<p>学习能让我们看清世界,认识世界,了解世界.<br>学习能让我们认识自我,看清自我.<br>学习是在学什么?</p>
+<h2 id="为了解决问题"><a href="#为了解决问题" class="headerlink" title="为了解决问题"></a>为了解决问题</h2><p>其实, 人生就像是操作系统一直在运作,唯独不同的是一旦关机后,会不会有上帝给你重启那就是另外一件事了.<br>起码我们假死的时候,自己可以杀掉进程,重新打开软件.<br>所以学习的最终目的就是解决问题,也就是产品上 解决bug.<br>人生来就是要俩解决各种问题的,并不是达到某种结果,结果都会死的.<br>过程最重要,一路上解决各种问题的过程,才是最珍贵的.</p>
 
                             </div>
 
@@ -197,7 +263,7 @@
                             <!-- 
                     <p class="copyright-item">
                         <span>Permalink:</span>
-                        <span><a href="http://dadongx.cn/2023/02/22/whynotstaet/">http://dadongx.cn/2023/02/22/whynotstaet/</a></span>
+                        <span><a href="http://dadongx.cn/2023/02/24/studywhat/">http://dadongx.cn/2023/02/24/studywhat/</a></span>
                     </p>
                 
                 
@@ -221,7 +287,7 @@
                                         <span class="tag">
                     
                     
-                        <a href="/tags/mysql/"># mysql</a>
+                        <a href="/tags/%E5%AD%A6%E4%B9%A0/"># 学习</a>
                     
                         
                 </span>
@@ -234,13 +300,9 @@
                                 </section>
                                 <section class="post-nav">
                                     
-                                        <a class="prev" rel="prev" href="/2023/02/23/3/">
-                                            一文搞懂 synchronized
-                                        </a>
-                                        
                                             
-                                                <a class="next" rel="next" href="/2023/02/21/testdatas/">
-                                                    创建1000w测试数据
+                                                <a class="next" rel="next" href="/2023/02/23/3/">
+                                                    一文搞懂 synchronized
                                                 </a>
                                                 
                                 </section>
