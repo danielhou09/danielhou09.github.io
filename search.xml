@@ -4,6 +4,58 @@
   
     
     <entry>
+      <title>SpinLock</title>
+      <link href="/2023/02/25/spinlock/"/>
+      <url>/2023/02/25/spinlock/</url>
+      
+        <content type="html"><![CDATA[<h2 id="含义"><a href="#含义" class="headerlink" title="含义"></a>含义</h2><p>线程等待加锁时，<strong>不会阻塞</strong>，<strong>不会进入等待状态</strong>，<strong>而是保持运行状态</strong>。大致的思路是：让当前线程不停地的在循环体内执行，当循环的条件被其他线程改变时才能进入临界区。</p><h2 id="优势"><a href="#优势" class="headerlink" title="优势"></a>优势</h2><ul><li><p>避免死锁<br>自旋锁不会让线程阻塞或等待，也就不需要唤醒，所以可以避免产生死锁；</p></li><li><p>提高性能<br>减少上下文切换次数,提高效率.</p><h2 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a>缺点</h2></li><li><p>在等待锁时进入循环会占用CPU，若等待的线程很多，对CPU的消耗会比较大；</p></li><li><p>不适合需要长时间等待的任务或线程；</p></li><li><p>不适合大量线程等待的场景。</p></li></ul><h2 id="适用场景"><a href="#适用场景" class="headerlink" title="适用场景"></a>适用场景</h2><ul><li>等待时间比较短的任务中；</li><li>线程数量不太多的应用中；</li><li>当等待时间长或线程数量很大时，可以使用其他锁（比如：可重入锁）。</li></ul><h2 id="java-实现"><a href="#java-实现" class="headerlink" title="java 实现"></a>java 实现</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">public class SpinkLock &#123;</span><br><span class="line">    </span><br><span class="line">    &#x2F;&#x2F; 是否占用的标志</span><br><span class="line">    private AtomicBoolean occupied &#x3D; new AtomicBoolean(false);</span><br><span class="line"></span><br><span class="line">    public void lock() &#123;</span><br><span class="line">        &#x2F;&#x2F; 使用自旋锁</span><br><span class="line">        while (occupied.getAndSet(true)) &#123;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public void unlock() &#123;</span><br><span class="line">        occupied.set(false);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> 技术 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 多线程 </tag>
+            
+            <tag> 并发编程 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Redis 相比 Memcached 有哪些优势？</title>
+      <link href="/2023/02/24/cachecompare/"/>
+      <url>/2023/02/24/cachecompare/</url>
+      
+        <content type="html"><![CDATA[<p>Redis 和 Memcached 都是内存中的键值存储系统，它们都可以用于缓存、会话存储等场景，但是 Redis 相对于 Memcached 有以下几个优势：</p><ol><li><p>数据结构更丰富：Redis 支持更多的数据结构，如字符串、哈希表、列表、集合、有序集合等，这些数据结构可以方便地解决各种复杂的问题，如计数器、排行榜、社交网络、消息队列等。</p></li><li><p>更高的可靠性：Redis 支持数据持久化，可以将数据写入磁盘，即使服务器重启，数据也不会丢失。同时 Redis 支持主从复制和 Sentinel 高可用方案，可以保证服务的可靠性。</p></li><li><p>更好的性能表现：Redis 采用单线程的方式来处理请求，避免了多线程之间的锁竞争和上下文切换的开销，同时采用了多种优化技术，如内存池、事件驱动等，使得 Redis 在吞吐量和响应时间方面表现更好。</p></li></ol><p>更灵活的分布式方案：Redis 提供了分片和集群两种分布式方案，分片可以水平扩展，支持更大的数据量，集群则可以自动化地完成数据分片、数据迁移和故障转移等任务，使得 Redis 更容易应对高并发和海量数据的场景。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 技术 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 缓存 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>学习是在学什么</title>
       <link href="/2023/02/24/studywhat/"/>
       <url>/2023/02/24/studywhat/</url>
@@ -123,6 +175,8 @@
         <tags>
             
             <tag> cache </tag>
+            
+            <tag> 缓存 </tag>
             
         </tags>
       
@@ -268,7 +322,11 @@
       
         <tags>
             
-            <tag> java 锁 </tag>
+            <tag> java </tag>
+            
+            <tag> 锁 </tag>
+            
+            <tag> 多线程 </tag>
             
         </tags>
       
